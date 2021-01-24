@@ -2,8 +2,8 @@
 .DS_Store
 
 # python
-src/*.pyc
-src/__pycache__
+madgab/*.pyc
+madgab/__pycache__
 
 # virtualenv
 .venv
