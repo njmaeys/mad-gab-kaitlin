@@ -7,3 +7,6 @@ madgab/__pycache__
 
 # virtualenv
 .venv
+
+# django
+secrets.json
