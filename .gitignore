@@ -2,11 +2,12 @@
 .DS_Store
 
 # python
-madgab/*.pyc
-madgab/__pycache__
+*.pyc
+__pycache__
+
 
 # virtualenv
 .venv
 
 # django
-secrets.json
+.env
