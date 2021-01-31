@@ -51,6 +51,7 @@ video {
   margin-top: 32px;
   color: #3dcadd;
   font-size: 32px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .gab-to-read .btn {
