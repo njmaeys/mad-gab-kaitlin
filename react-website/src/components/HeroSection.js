@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
-//import { Link } from 'react-router-dom';
 import '../App.css';
 import Button from './Button';
 import './HeroSection.css';
-import {gabsData} from './gabs';
 
 import HeroVideo from "../videos/sparkle.mp4";
 //https://pixabay.com/videos/
@@ -13,11 +11,15 @@ function HeroSection() {
   const [showGabResults, setGabResults] = useState(false);
   const [gab, setGab] = useState('');
 
-  function getNewGab() {
-    const random = Math.floor(Math.random() * gabsData.length);
-    const newGab = gabsData[random];
-    setGab(newGab);
-    return
+  const getGabs = async () => {
+    const response = await fetch('https://gabs.pandablade.com/onegab')
+    const data = await response.json()
+
+    const theGab = {
+      "gab": data["data"]["gab"],
+      "gabValue": data["data"]["gabValue"],
+    }
+    setGab(theGab);
   }
 
   const GabResults = () => {
@@ -50,7 +52,7 @@ function HeroSection() {
   }
 
   const onClickGetGab = () => {
-    getNewGab();
+    getGabs();
     setShowNewGab(true);
     setGabResults(false);
   }
@@ -78,7 +80,4 @@ function HeroSection() {
   )
 }
 
-
-//        { showResults ? <Results /> : null}
-//        { showGabResults ? <GabResults /> : null}
 export default HeroSection;
