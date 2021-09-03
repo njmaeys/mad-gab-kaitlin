@@ -17,7 +17,7 @@ function Cards() {;
             alt="Twitch"
             text="Streamin"
             label="Twitch"
-            dest="https://www.twitch.tv/eponablue"
+            dest="https://www.twitch.tv/krabbs4u"
           />
         </div>
         <div className='cards__wrapper'>
